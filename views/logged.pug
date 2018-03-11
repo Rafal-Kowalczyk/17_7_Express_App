@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title Aplikacja logowania Google
+        link(rel='stylesheet', href='/static/style.css')
+    body
+        div.container
+            h1 Witaj w aplikacji
+            h3 #{user.displayName}
+            p Twoje logowanie zakończyło się sukcesem
+            p.container-description #[img.success(src='/static/img/success-icon.png')]
+
+                         
+            a.button(href='/logout') Log out !
