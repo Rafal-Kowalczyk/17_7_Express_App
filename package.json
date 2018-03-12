@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:html && npm run test:js",
+    "test:html": "glob-run nu-html-checker *.html",
+    "test:js": "jshint ./ --exclude node_modules"
   },
   "keywords": [],
   "author": "Rafał Kowalczyk",
   "license": "ISC",
   "dependencies": {
+    "glob-run": "^0.1.6",
+    "jshint": "^2.9.5",
+    "nu-html-checker": "^0.1.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "passport": "^0.4.0",
