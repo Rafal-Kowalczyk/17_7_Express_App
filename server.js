@@ -48,7 +48,7 @@ app.get('/logout', function(req, res) {
     googleProfile = null;
     req.logOut();
     res.redirect('/');
-})
+});
 //Passport routes
 app.get('/auth/google',
 passport.authenticate('google', {
